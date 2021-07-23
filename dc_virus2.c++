@@ -22,6 +22,7 @@ bool virus(vector<int> &V, int start, int stop)
         else
             sum_right += V[i];
     } // DO NOt forget to check the number of '1' in any sides apart from the sub-array  !!!!
+    // Ex : 1 1 1 0 0 1 0 0  &&   0 0 0 1 1 0 0 1
     return subV && abs(sum_left - sum_right) <= 1;
 }
 
