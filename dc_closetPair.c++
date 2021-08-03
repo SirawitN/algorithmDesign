@@ -17,12 +17,12 @@ int main()
         cin >> x >> y;
         C.push_back(make_pair(x, y));
     }
-    sort(C.begin(), C.end());
+    sort(C.begin(), C.end()); // <<------------------  sort points by x-axis
 
     for (int i = 0; i < N - 1; i++)
     {
         p1 = C[i];
-        for (int j = i + 1; j < i + 8 && j < N; j++)
+        for (int j = i + 1; j < i + 8 && j < N; j++) // <<-----------------  ใช้การเทียบ 7 จุดใกล้สุด
         {
             p2 = C[j];
             if (p2.first < p1.first + strip)

@@ -6,9 +6,10 @@ vector<long long> C, Q;
 
 long long largeRest(long long startT, long long stopT, long long q)
 {
+    //cout << startT << " " << stopT << "\n";
     if (startT > stopT) //terminating condition
         return startT;
-    long long mid = (startT + stopT) / 2, numOfCust = C.size();
+    long long mid = (startT + stopT) / 2, numOfCust = C.size(); // <<---------------------------
 
     for (long long &c : C)
     {
